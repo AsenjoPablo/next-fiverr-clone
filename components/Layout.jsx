@@ -25,7 +25,6 @@ export default function Layout({ children })
             </main>
 
             <footer>
-                hola footer
             </footer>
         </>
     )
