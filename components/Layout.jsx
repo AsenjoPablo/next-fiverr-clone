@@ -17,7 +17,7 @@ export default function Layout({ children })
             <Head></Head>
 
             <nav
-                className={`${isNavColored ? 'bg-white text-gray-800' : 'bg-transparent text-white'} flex justify-between w-full px-12 fixed duration-300`}>
+                className={`${isNavColored ? 'bg-white text-gray-800' : 'bg-transparent text-white'} z-50 flex justify-between w-full px-12 fixed duration-300`}>
                 <Image width={100} height={60} src={`${isNavColored ? '/img/logos/fiverr-black.svg' : '/img/logos/fiverr.svg'}`} alt="Fiverr logo" />
                 <ul className="flex gap-8 items-center">
                     <li>Fiverr Business</li>
