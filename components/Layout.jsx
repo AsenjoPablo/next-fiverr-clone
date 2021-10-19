@@ -1,14 +1,34 @@
 import Head from 'next/head'
 import Image from 'next/image'
 
+import { useState, useEffect } from 'react';
+
 export default function Layout({ children })
 {
+    const [isNavColored, setIsNavColored] = useState(false);
+    const updateNavbar = () =>
+    {
+        console.log(window.scrollY)
+        if (window.scrollY > 130)
+        {
+            setIsNavColored(true);
+        } else
+        {
+            setIsNavColored(false);
+        }
+    }
+    useEffect(() =>
+    {
+        updateNavbar();
+        window.addEventListener('scroll', updateNavbar)
+    })
     return (
         <>
             <Head></Head>
 
-            <nav className="bg-transparent flex justify-between w-full px-12 py-6 fixed text-white">
-                <Image width={100} height={60} src="/img/logos/fiverr.svg" alt="Fiverr logo" />
+            <nav
+                className={`${isNavColored ? 'bg-white text-gray-800' : 'bg-transparent text-white'} flex justify-between w-full px-12 fixed duration-300`}>
+                <Image width={100} height={60} src={`${isNavColored ? '/img/logos/fiverr-black.svg' : '/img/logos/fiverr.svg'}`} alt="Fiverr logo" />
                 <ul className="flex gap-8 items-center">
                     <li>Fiverr Business</li>
                     <li>Explore</li>

@@ -26,6 +26,7 @@ export default function Home() {
           <Image width={100} height={60} src="/img/logos/paypal.png" alt="Paypal logo" />
         </div>
       </section>
+
       <section className="section-container bg-white">
         <div className="section-spaced">
           <h2 className="section-header">Popular professional services</h2>
