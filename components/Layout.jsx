@@ -6,17 +6,7 @@ import { useState, useEffect } from 'react';
 export default function Layout({ children })
 {
     const [isNavColored, setIsNavColored] = useState(false);
-    const updateNavbar = () =>
-    {
-        console.log(window.scrollY)
-        if (window.scrollY > 130)
-        {
-            setIsNavColored(true);
-        } else
-        {
-            setIsNavColored(false);
-        }
-    }
+    const updateNavbar = () => window.scrollY > 130 ? setIsNavColored(true) : setIsNavColored(false)
     useEffect(() =>
     {
         updateNavbar();
