@@ -38,38 +38,6 @@ export default function Home() {
               <Image className="h-full" src="/img/services-images/seo.webp" width={280} height={340} alt="seo" />
               <div className="service__backdrop"></div>
             </div>
-            <div className="service__image">
-              <div className="service__text">
-                <span className="service__text__subtitle">Unlock growth online</span>
-                <span className="service__text__title">SEO</span>
-              </div>
-              <Image className="h-full" src="/img/services-images/seo.webp" width={280} height={340} alt="seo" />
-              <div className="service__backdrop"></div>
-            </div>
-            <div className="service__image">
-              <div className="service__text">
-                <span className="service__text__subtitle">Unlock growth online</span>
-                <span className="service__text__title">SEO</span>
-              </div>
-              <Image className="h-full" src="/img/services-images/seo.webp" width={280} height={340} alt="seo" />
-              <div className="service__backdrop"></div>
-            </div>
-            <div className="service__image">
-              <div className="service__text">
-                <span className="service__text__subtitle">Unlock growth online</span>
-                <span className="service__text__title">SEO</span>
-              </div>
-              <Image className="h-full" src="/img/services-images/seo.webp" width={280} height={340} alt="seo" />
-              <div className="service__backdrop"></div>
-            </div>
-            <div className="service__image">
-              <div className="service__text">
-                <span className="service__text__subtitle">Unlock growth online</span>
-                <span className="service__text__title">SEO</span>
-              </div>
-              <Image className="h-full" src="/img/services-images/seo.webp" width={280} height={340} alt="seo" />
-              <div className="service__backdrop"></div>
-            </div>
           </div>
         </div>
       </section>
