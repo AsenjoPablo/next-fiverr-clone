@@ -26,14 +26,14 @@ export default function Nav()
                     <li>
                         <Link href="/">
                             <button className="text-purple-900 text-lg hover:text-purple-400 duration-150">
-                                Dónde estamos
+                                Offices
                             </button>
                         </Link>
                     </li>
                     <li>
                         <Link href="/">
                             <button className="text-white bg-purple-500 p-2 px-4 rounded-lg text-lg hover:text-white hover:bg-purple-400 hover:shadow duration-150">
-                                Empezar
+                                Get started
                             </button>
                         </Link>
                     </li>
@@ -48,14 +48,14 @@ export default function Nav()
                     <li className="flex flex-col justify-end">
                         <Link href="/">
                             <button className="text-lg self-end text-black flex">
-                                Dónde estamos
+                                Offices
                             </button>
                         </Link>
                     </li>
                     <li className="flex flex-col justify-end">
                         <Link href="/">
                             <button className="text-lg self-end text-black flex font-medium">
-                                Empezar
+                                Get started
                             </button>
                         </Link>
                     </li>
