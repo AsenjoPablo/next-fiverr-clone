@@ -1,5 +1,6 @@
 import Layout from '../components/Layout'
 import Image from 'next/image'
+import Link from 'next/link'
 
 import {useState, useEffect} from 'react';
 
@@ -103,6 +104,53 @@ export default function Home()
             </ul>
           </div>
           <Image className="object-cover" src="/img/services-images/women-laptop.webp" width={400} height={400} alt="Happy women in front of a computer"></Image>
+        </div>
+      </section>
+
+
+
+      <section className="section-container bg-gray-200 text-gray-700">
+        <div className="section-spaced flex flex-col">
+          <div className="flex flex-col md:flex-row md:items-start gap-16 py-12 justify-between items-center">
+            <ul className="flex flex-col gap-4">
+              <li className="font-bold">Categories</li>
+              <li><a href="#">Graphics and design</a></li>
+              <li><a href="#">Graphics and design</a></li>
+              <li><a href="#">Graphics and design</a></li>
+              <li><a href="#">Graphics and design</a></li>
+            </ul>
+            <ul className="flex flex-col gap-4">
+              <li className="font-bold">Categories</li>
+              <li><a href="#">Graphics and design</a></li>
+              <li><a href="#">Graphics and design</a></li>
+            </ul>
+            <ul className="flex flex-col gap-4">
+              <li className="font-bold">Categories</li>
+              <li><a href="#">Graphics and design</a></li>
+              <li><a href="#">Graphics and design</a></li>
+              <li><a href="#">Graphics and design</a></li>
+            </ul>
+            <ul className="flex flex-col gap-4">
+              <li className="font-bold">Categories</li>
+              <li><a href="#">Graphics and design</a></li>
+              <li><a href="#">Graphics and design</a></li>
+              <li><a href="#">Graphics and design</a></li>
+              <li><a href="#">Graphics and design</a></li>
+              <li><a href="#">Graphics and design</a></li>
+            </ul>
+          </div>
+
+          <div className="flex flex-col gap-4 items-center justify-between md:flex-row border-gray-300 border-t-2 w-full py-12">
+            <Link href="/">
+              <span className="text-2xl tracking-widest uppercase">Corporation</span>
+            </Link>
+            <div className="flex gap-4">
+              <span>media</span>
+              <span>media</span>
+              <span>media</span>
+              <span>media</span>
+            </div>
+          </div>
         </div>
       </section>
     </Layout>
