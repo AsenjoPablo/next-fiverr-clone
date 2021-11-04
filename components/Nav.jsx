@@ -1,7 +1,7 @@
 import React from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 
 export default function Nav()
 {
@@ -11,21 +11,19 @@ export default function Nav()
         setIsMenuOpen(!isMenuOpen);
     }
 
+    const [isNavColored, setIsNavColored] = useState(false);
+    const updateNavbar = () => window.scrollY > 130 ? setIsNavColored(true) : setIsNavColored(false)
+    useEffect(() =>
+    {
+        updateNavbar();
+        window.addEventListener('scroll', updateNavbar)
+    })
+
     return (
         <>
-            <nav className="z-30 flex flex-row p-4 px-8 items-center justify-between w-full bg-white fixed border-b-2">
+            <nav className="flex flex-row p-4 px-8 items-center justify-between w-full fixed duration-150 z-30 bg-white shadow">
                 <Link href="/">
-                    <div className="cursor-pointer flex flex-row gap-2 items-center hover:opacity-60 duration-200">
-                        <div className="hidden md:flex">
-                            <Image
-                                className="hidden"
-                                src="/images/logos/logo-small.svg"
-                                alt="pizza place logo"
-                                height="40"
-                                width="40" />
-                        </div>
-                        <span className="text-2xl tracking-widest uppercase">Il ristorante</span>
-                    </div>
+                    <span className="text-2xl tracking-widest uppercase">Corporation</span>
                 </Link>
 
                 <button className="md:hidden flex flex-col justify-center" onClick={handleMenu}>
@@ -34,16 +32,16 @@ export default function Nav()
 
                 <ul className="hidden md:flex flex-row items-center gap-4">
                     <li>
-                        <Link href="/locales">
-                            <button className="text-primary text-lg hover:text-primary-light duration-150">
+                        <Link href="/">
+                            <button className="text-purple-900 text-lg hover:text-purple-400 duration-150">
                                 Dónde estamos
                             </button>
                         </Link>
                     </li>
                     <li>
-                        <Link href="/carta">
-                            <button className="text-white bg-primary p-2 px-4 rounded-lg text-lg hover:text-white hover:bg-primary-light duration-150">
-                                Ver carta
+                        <Link href="/">
+                            <button className="text-white bg-purple-500 p-2 px-4 rounded-lg text-lg hover:text-white hover:bg-purple-400 hover:shadow duration-150">
+                                Empezar
                             </button>
                         </Link>
                     </li>
@@ -53,19 +51,19 @@ export default function Nav()
             {
                 // responsive menu when toggled
             }
-            <div className={(!isMenuOpen ? '-translate-y-96' : 'translate-y-0') + " z-20 bg-white fixed top-16 right-0 w-screen duration-500 md:hidden"}>
+            <div className={(!isMenuOpen ? '-translate-y-96' : 'translate-y-0') + " bg-white z-20 fixed top-16 right-0 w-screen duration-500 md:hidden"}>
                 <ul className="flex flex-col p-4 gap-4">
                     <li className="flex flex-col justify-end">
-                        <Link href="/locales">
-                            <button className="text-2xl self-end text-black flex hover:text-primary-light duration-150">
+                        <Link href="/">
+                            <button className="text-lg self-end text-black flex">
                                 Dónde estamos
                             </button>
                         </Link>
                     </li>
                     <li className="flex flex-col justify-end">
-                        <Link href="/carta">
-                            <button className="text-2xl self-end text-primary flex font-bold  hover:bg-primary-light duration-150">
-                                Ver carta
+                        <Link href="/">
+                            <button className="text-lg self-end text-black flex font-medium">
+                                Empezar
                             </button>
                         </Link>
                     </li>
