@@ -11,14 +11,6 @@ export default function Nav()
         setIsMenuOpen(!isMenuOpen);
     }
 
-    const [isNavColored, setIsNavColored] = useState(false);
-    const updateNavbar = () => window.scrollY > 130 ? setIsNavColored(true) : setIsNavColored(false)
-    useEffect(() =>
-    {
-        updateNavbar();
-        window.addEventListener('scroll', updateNavbar)
-    })
-
     return (
         <>
             <nav className="flex flex-row p-4 px-8 items-center justify-between w-full fixed duration-150 z-30 bg-white shadow">
